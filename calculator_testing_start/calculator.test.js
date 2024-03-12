@@ -16,16 +16,22 @@ describe('sum', () => {
     expect(actual).toBe(expected);
   });
 
-  test.skip('can add two large positive numbers', () => { 
-    
+  test('can add two large positive numbers', () => { 
+    expected = 9540000000;
+    actual = sum(4770000000, 4770000000);
+    expect(actual).toBe(expected);
   });
 
-  test.skip('can add two negative numbers', () => {
-    
+  test('can add two negative numbers', () => {
+    expected = -50;
+    actual = sum(-25, -25);
+    expect(actual).toBe(expected);
   });
 
-  test.skip('can add zero', () => {
-    
+  test('can add zero', () => {
+    expected = 0;
+    actual = sum(0, 0);
+    expect(actual).toBe(expected);
   });
 
 });
