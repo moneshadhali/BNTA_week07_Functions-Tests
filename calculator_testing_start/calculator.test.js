@@ -30,7 +30,7 @@ describe('sum', () => {
   test('can add zero', () => {
     expected = 0;
     actual = sum(0, 0);
-    expect(actual).toBe(expected);
+    expect(actual).toEqual(expected);
   });
 
 });
@@ -59,6 +59,8 @@ describe('subtract', () => {
     actual = subtract(9835678095, 2345678987);
     expect(actual).toBe(expected);
   })
+
+
 });
 
 describe('multiply', () => {
@@ -105,7 +107,7 @@ describe('divide', () => {
   test("can not divide two zero numbers", () =>{
     expected = NaN;
     actual = divide(0, 0);
-    expect(actual).toBe(expected);
+    expect(actual).toBeNaN();
   })
 
   test("can divide a big negative and a positive numbers", () =>{
@@ -137,7 +139,7 @@ describe('modulus', () => {
   test("can do modulus to two zero numbers", () =>{
     expected = NaN;
     actual = modulus(0, 0);
-    expect(actual).toBe(expected);
+    expect(actual).toBeNaN();
   })
 });
 
