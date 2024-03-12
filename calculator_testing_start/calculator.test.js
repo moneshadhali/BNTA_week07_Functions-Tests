@@ -204,4 +204,5 @@ describe('odd', () => {
     actual = odd(0);
     expect(actual).toBe(expected);
   })
+  
 });
