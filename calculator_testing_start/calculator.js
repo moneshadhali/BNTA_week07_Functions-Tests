@@ -18,13 +18,13 @@ const modulus = function(a, b){
     return a % b;
 };
 
-const even = function(a){
-    if(a % 2 == 0){
-        return true;
-    }else{
-        return false;
-    }
-};
+// const even = function(a){
+//     if(a % 2 == 0){
+//         return true;
+//     }else{
+//         return false;
+//     }
+// };
 
 // const odd = function(a){
 //     if(a % 2 !== 0){
@@ -35,7 +35,7 @@ const even = function(a){
 // };
 
 const isEvenOrOdd = function(a){
-    if(even(a)){
+    if(a % 2 == 0){
         return "even";
     }else{
         return "odd";
