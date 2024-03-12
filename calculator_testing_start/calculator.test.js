@@ -59,8 +59,6 @@ describe('subtract', () => {
     actual = subtract(9835678095, 2345678987);
     expect(actual).toBe(expected);
   })
-
-
 });
 
 describe('multiply', () => {
