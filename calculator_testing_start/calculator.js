@@ -26,7 +26,13 @@ const even = function(a){
     }
 };
 
-const odd = null;
+const odd = function(a){
+    if(a % 2 !== 0){
+        return true;
+    }else{
+        return false;
+    }
+};
 
 module.exports = { 
     sum, 
