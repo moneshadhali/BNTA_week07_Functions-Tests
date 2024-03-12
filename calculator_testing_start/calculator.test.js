@@ -143,7 +143,35 @@ describe('modulus', () => {
 });
 
 describe('even', () => {
+  test("can produce even when there's a positive number", () =>{
+    expected = true;
+    actual = even(2);
+    expect(actual).toBe(expected);
+  })
 
+  test("can produce even when there's a negative number", () =>{
+    expected = true;
+    actual = even(-2);
+    expect(actual).toBe(expected);
+  })
+
+  test("can return false when there's a positive number", () =>{
+    expected = false;
+    actual = even(7);
+    expect(actual).toBe(expected);
+  })
+
+  test("can return false when there's a negative number", () =>{
+    expected = false;
+    actual = even(-7);
+    expect(actual).toBe(expected);
+  })
+
+  test("can return true when there's a zero number", () =>{
+    expected = true;
+    actual = even(0);
+    expect(actual).toBe(expected);
+  })
 });
 
 describe('odd', () => {
