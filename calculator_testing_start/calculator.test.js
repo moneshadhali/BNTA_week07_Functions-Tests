@@ -175,5 +175,33 @@ describe('even', () => {
 });
 
 describe('odd', () => {
+  test("can produce odd when there's a positive number", () =>{
+    expected = true;
+    actual = odd(3);
+    expect(actual).toBe(expected);
+  })
 
+  test("can produce odd when there's a negative number", () =>{
+    expected = true;
+    actual = odd(-3);
+    expect(actual).toBe(expected);
+  })
+
+  test("can return false when there's a positive number", () =>{
+    expected = false;
+    actual = odd(6);
+    expect(actual).toBe(expected);
+  })
+
+  test("can return false when there's a negative number", () =>{
+    expected = false;
+    actual = odd(-6);
+    expect(actual).toBe(expected);
+  })
+
+  test("can return true when there's a zero number", () =>{
+    expected = false;
+    actual = odd(0);
+    expect(actual).toBe(expected);
+  })
 });
