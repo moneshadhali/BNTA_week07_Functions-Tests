@@ -34,6 +34,14 @@ const odd = function(a){
     }
 };
 
+const isEvenOrOdd = function(a){
+    if(even){
+        return true;
+    }
+    if(odd){
+        return true;
+    }
+}
 module.exports = { 
     sum, 
     subtract, 
@@ -41,5 +49,6 @@ module.exports = {
     divide, 
     modulus, 
     even, 
-    odd 
+    odd,
+    isEvenOrOdd
 };
