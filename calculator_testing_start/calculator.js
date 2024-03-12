@@ -18,37 +18,20 @@ const modulus = function(a, b){
     return a % b;
 };
 
-const even = function(a){
-    if(a % 2 == 0){
-        return true;
-    }else{
-        return false;
-    }
-};
-
-const odd = function(a){
-    if(a % 2 !== 0){
-        return true;
-    }else{
-        return false;
-    }
-};
 
 const isEvenOrOdd = function(a){
-    if(even){
-        return true;
-    }
-    if(odd){
-        return true;
+    if(a % 2 == 0){
+        return "even";
+    }else{
+        return "odd";
     }
 }
+
 module.exports = { 
     sum, 
     subtract, 
     multiply, 
     divide, 
     modulus, 
-    even, 
-    odd,
-    isEvenOrOdd
+    isEvenOrOdd,
 };

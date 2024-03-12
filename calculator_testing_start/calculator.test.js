@@ -4,8 +4,7 @@ const {
   multiply,
   divide,
   modulus,
-  even,
-  odd,
+  isEvenOrOdd,
 } = require("./calculator");
 
 describe('sum', () => { 
@@ -144,65 +143,59 @@ describe('modulus', () => {
 
 describe('even', () => {
   test("can produce even when there's a positive number", () =>{
-    expected = true;
-    actual = even(2);
+    expected = "even";
+    actual = isEvenOrOdd(2);
     expect(actual).toBe(expected);
   })
 
   test("can produce even when there's a negative number", () =>{
-    expected = true;
-    actual = even(-2);
+    expected = "even";
+    actual = isEvenOrOdd(-2);
     expect(actual).toBe(expected);
   })
 
   test("can return false when there's a positive number", () =>{
-    expected = false;
-    actual = even(7);
+    expected = "odd";
+    actual = isEvenOrOdd(7);
     expect(actual).toBe(expected);
   })
 
   test("can return false when there's a negative number", () =>{
-    expected = false;
-    actual = even(-7);
+    expected = "odd";
+    actual = isEvenOrOdd(-7);
     expect(actual).toBe(expected);
   })
 
   test("can return true when there's a zero number", () =>{
-    expected = true;
-    actual = even(0);
+    expected = "even";
+    actual = isEvenOrOdd(0);
     expect(actual).toBe(expected);
   })
 });
 
 describe('odd', () => {
   test("can produce odd when there's a positive number", () =>{
-    expected = true;
-    actual = odd(3);
+    expected = "odd";
+    actual = isEvenOrOdd(3);
     expect(actual).toBe(expected);
   })
 
   test("can produce odd when there's a negative number", () =>{
-    expected = true;
-    actual = odd(-3);
+    expected = "odd";
+    actual = isEvenOrOdd(-3);
     expect(actual).toBe(expected);
   })
 
   test("can return false when there's a positive number", () =>{
-    expected = false;
-    actual = odd(6);
+    expected = "even";
+    actual = isEvenOrOdd(6);
     expect(actual).toBe(expected);
   })
 
   test("can return false when there's a negative number", () =>{
-    expected = false;
-    actual = odd(-6);
+    expected = "even";
+    actual = isEvenOrOdd(-6);
     expect(actual).toBe(expected);
   })
 
-  test("can return true when there's a zero number", () =>{
-    expected = false;
-    actual = odd(0);
-    expect(actual).toBe(expected);
-  })
-  
 });
