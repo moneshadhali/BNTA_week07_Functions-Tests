@@ -48,6 +48,18 @@ describe('subtract', () => {
     actual = subtract(-25, -25);
     expect(actual).toBe(expected);
   })
+
+  test("can substract a negative and a positive numbers", () =>{
+    expected = 20;
+    actual = subtract(-25, 5);
+    expect(actual).toBe(expected);
+  })
+
+  test("can substract two large numbers", () =>{
+    expected = 7489999108;
+    actual = subtract(9835678095, 2345678987);
+    expect(actual).toBe(expected);
+  })
 });
 
 describe('multiply', () => {
