@@ -18,9 +18,24 @@ const modulus = function(a, b){
     return a % b;
 };
 
+const even = function(a){
+    if(a % 2 == 0){
+        return true;
+    }else{
+        return false;
+    }
+};
+
+// const odd = function(a){
+//     if(a % 2 !== 0){
+//         return true;
+//     }else{
+//         return false;
+//     }
+// };
 
 const isEvenOrOdd = function(a){
-    if(a % 2 == 0){
+    if(even(a)){
         return "even";
     }else{
         return "odd";

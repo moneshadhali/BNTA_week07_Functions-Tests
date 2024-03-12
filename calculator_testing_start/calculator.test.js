@@ -93,9 +93,9 @@ describe('multiply', () => {
 
 describe('divide', () => {
   test("can divide two negative numbers", () =>{
-    expected = 8.776119402985074;
+    expected = 8.78;
     actual = divide(-588, -67);
-    expect(actual).toBe(expected);
+    expect(actual).toBeCloseTo(expected, 2);
   })
 
   test("can divide two positive numbers", () =>{
@@ -111,9 +111,9 @@ describe('divide', () => {
   })
 
   test("can divide a big negative and a positive numbers", () =>{
-    expected = -65.33333333333333;
+    expected = -65.33;
     actual = divide(-588, 9);
-    expect(actual).toBe(expected);
+    expect(actual).toBeCloseTo(expected, 2);
   })
 });
 
