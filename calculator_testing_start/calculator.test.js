@@ -117,7 +117,29 @@ describe('divide', () => {
 });
 
 describe('modulus', () => {
+  test("can do modulus to two positive numbers", () =>{
+    expected = 0;
+    actual = modulus(10, 2);
+    expect(actual).toBe(expected);
+  })
 
+  test("can do modulus to two negative numbers", () =>{
+    expected = -1;
+    actual = modulus(-456, -5);
+    expect(actual).toBe(expected);
+  })
+
+  test("can do modulus to two large numbers", () =>{
+    expected = 1088897;
+    actual = modulus(87655434567, 8765434567);
+    expect(actual).toBe(expected);
+  })
+
+  test("can do modulus to two zero numbers", () =>{
+    expected = NaN;
+    actual = modulus(0, 0);
+    expect(actual).toBe(expected);
+  })
 });
 
 describe('even', () => {
