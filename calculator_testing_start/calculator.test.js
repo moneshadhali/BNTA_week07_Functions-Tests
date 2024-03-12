@@ -50,7 +50,7 @@ describe('subtract', () => {
   })
 
   test("can substract a negative and a positive numbers", () =>{
-    expected = 20;
+    expected = -30;
     actual = subtract(-25, 5);
     expect(actual).toBe(expected);
   })
@@ -91,7 +91,29 @@ describe('multiply', () => {
 });
 
 describe('divide', () => {
+  test("can divide two negative numbers", () =>{
+    expected = 8.776119402985074;
+    actual = divide(-588, -67);
+    expect(actual).toBe(expected);
+  })
 
+  test("can divide two positive numbers", () =>{
+    expected = 5;
+    actual = divide(10, 2);
+    expect(actual).toBe(expected);
+  })
+
+  test("can not divide two zero numbers", () =>{
+    expected = NaN;
+    actual = divide(0, 0);
+    expect(actual).toBe(expected);
+  })
+
+  test("can divide a big negative and a positive numbers", () =>{
+    expected = -65.33333333333333;
+    actual = divide(-588, 9);
+    expect(actual).toBe(expected);
+  })
 });
 
 describe('modulus', () => {
